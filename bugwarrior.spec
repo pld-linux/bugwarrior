@@ -68,14 +68,11 @@ bugzilla, megaplan, teamlab, redmine, and activecollab
 rm -r %{name}.egg-info
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} $RPM_BUILD_ROOT%{py_sitescriptdir}/%{name}/README.rst
 %{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/%{name}/docs
