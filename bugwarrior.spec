@@ -12,7 +12,7 @@ Source0:	http://pypi.python.org/packages/source/b/bugwarrior/%{name}-%{version}.
 # Source0-md5:	09c93f86a27ffc092e69b46889a3bf50
 URL:		http://pypi.python.org/pypi/bugwarrior
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with tests}
 BuildRequires:	python-bitlyapi
 BuildRequires:	python-bugzilla
